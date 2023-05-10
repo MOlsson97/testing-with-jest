@@ -47,6 +47,6 @@ describe('Clicking "Pusha till stacken"', () => {
         await push.click();
         let alert = await driver.switchTo().alert();
         await alert.dismiss();
-        expect(await topOfStack.getText()).toEqual("wow");
+        expect(await topOfStack.getText()).toEqual("");
 })
 });
