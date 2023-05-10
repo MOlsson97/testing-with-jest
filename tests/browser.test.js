@@ -41,4 +41,12 @@ describe('Clicking "Pusha till stacken"', () => {
 		await alert.sendKeys("Bananer");
 		await alert.accept();
 	});
+    it('should not push anything if you click cancel', async () => {
+        let push = await driver.findElement(By.id('push'));
+        let topOfStack = await driver.findElement(By.id('top_of_stack'));
+        await push.click();
+        let alert = await driver.switchTo().alert();
+        await alert.dismiss();
+        expect(await topOfStack.getText()).toEqual("wow");
+})
 });
