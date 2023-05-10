@@ -24,13 +24,13 @@ test('The stack should be empty in the beginning', async () => {
 });
 
 test('The peek-button should have the correct text', async () => {
-    let peek = await driver.findElement(By.id('push')).getText();
+    let peek = await driver.findElement(By.id('peek')).getText();
     expect(peek).toEqual("Vad finns överst på stacken?");
 });
 
 test('Check if peek-button is clickable', async () => {
     let peek = await driver.findElement(By.id('peek'));
-    expect(await peek.isEnabled()).toBe(false);
+    expect(await peek.isEnabled()).toBe(true);
 })
 
 describe('Clicking "Pusha till stacken"', () => {

@@ -21,12 +21,12 @@ test('peek on stack with two or more elements returns the top element', () => {
 test('push on stack adds the element on top', () => {
     stack.push(1);
     stack.push(42);
-    expect(stack.peek()).toBe(1);
+    expect(stack.peek()).toBe(42);
 })
 
 test('pop on stack removes the top element', () => {
     stack.push(1);
     stack.push(42);
     stack.pop();
-    expect(stack.peek()).toBe(42);
+    expect(stack.peek()).toBe(1);
 })
